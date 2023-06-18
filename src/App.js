@@ -1,7 +1,12 @@
-import logo from "./logo.svg";
+import {useState} from 'react';
+
 import "./App.css";
 
-function App() {
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import Header from './components/UI/Header';
+
+function App(props) {
 
   const rotateHandler = () => {
     document.getElementsByClassName("App")[0].classList.toggle('rotate');
@@ -10,8 +15,12 @@ function App() {
   return (
     <div className="App">
       <div className="container" onClick={rotateHandler}>
-        <div className="front">Frente</div>
-        <div className="back">Atras</div>
+        <div className="front" id="front">
+        <Header></Header>
+          Frente</div>
+        <div className="back" id="back">
+        <Header></Header>
+          Atras</div>
       </div>
     </div>
   );
