@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+
+  const rotateHandler = () => {
+    document.getElementsByClassName("App")[0].classList.toggle('rotate');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container" onClick={rotateHandler}>
+        <div className="front">Frente</div>
+        <div className="back">Atras</div>
+      </div>
     </div>
   );
 }
