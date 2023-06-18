@@ -1,3 +1,25 @@
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
 .about{
     background-color: orange;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px 2px rgba(40,40,40,0.3);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 2rem;
+}
+
+.dissappear{
+    opacity: 0;
+    transition: opacity .5s;
 }

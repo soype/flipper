@@ -2,27 +2,27 @@ import React from "react";
 
 import Header from "../UI/Header";
 
-import styles from "./About.module.css";
+import styles from "./Home.module.css";
 
-const About = (props) => {
+const Home = (props) => {
   const homeHandler = () => {
-    document.getElementById("container").classList.toggle(styles.dissappear);
-    setTimeout(() => {
-      props.toggleHome();
-      document.getElementById("container").classList.toggle(styles.dissappear);
-    }, 500);
-  };
-
-  const aboutHandler = () => {
-    if (props.isAbout === false) {
+    if (props.home === false) {
       document.getElementById("container").classList.toggle(styles.dissappear);
       setTimeout(() => {
-        props.toggleAbout();
+        props.toggleHome();
         document
           .getElementById("container")
           .classList.toggle(styles.dissappear);
       }, 500);
     }
+  };
+
+  const aboutHandler = () => {
+    document.getElementById("container").classList.toggle(styles.dissappear);
+    setTimeout(() => {
+      props.toggleAbout();
+      document.getElementById("container").classList.toggle(styles.dissappear);
+    }, 500);
   };
 
   const contactHandler = () => {
@@ -32,7 +32,6 @@ const About = (props) => {
       document.getElementById("container").classList.toggle(styles.dissappear);
     }, 500);
   };
-
   return (
     <div id="container" className={styles.container}>
       <Header
@@ -40,9 +39,9 @@ const About = (props) => {
         toggleAbout={aboutHandler}
         toggleContact={contactHandler}
       ></Header>
-      <div className={styles.about}>About</div>
+      <div className={styles.home}>Home</div>
     </div>
   );
 };
 
-export default About;
+export default Home;
