@@ -47,10 +47,10 @@ const Home = (props) => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorum dicta libero est quibusdam voluptates natus, veniam optio numquam, exercitationem, autem culpa nesciunt rem fugit facilis atque dolor maxime delectus!</p>
         </div>
         <div className={styles.right}>
-          <span className={styles['v-line -animated']}></span>
-          <img src="" alt="" />
-          <span className={styles['h-line -animated']}></span>
-          <img src="" alt="" />
+          <span className={`${styles['v-line']} ${styles['v-line-animated']}`}></span>
+          <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" className={`${styles['image-large']} ${styles['appear']}`} />
+          <span className={`${styles['h-line']} ${styles['h-line-animated']}`}></span>
+          <img src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" className={styles['image-small']} />
         </div>
         
       </div>

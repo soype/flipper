@@ -18,7 +18,7 @@ const Header = (props) => {
 
   return (
     <div className={styles.header}>
-        <div className={styles.logo}>Title</div>
+        <div className={styles.logo} onClick={toggleHomeHandler}>Solar Systems</div>
         <div className={styles.menu}>
             <li onClick={toggleHomeHandler}>Home</li>
             <li onClick={toggleAboutHandler}>About</li>
