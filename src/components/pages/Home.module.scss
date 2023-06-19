@@ -7,16 +7,44 @@
 }
 
 .home{
-    background-color: red;
+    background-color: rgb(27, 27, 27);
     height: 100%;
     width: 100%;
     box-shadow: 0 0 5px 2px rgba(40,40,40,0.3);
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
     backface-visibility: hidden;
     border-radius: 2rem;
+}
+
+.left{
+    width: 60%;
+    padding: 1rem;
+    h1, p{
+        margin: 1rem 5rem 1rem 1rem;   
+        text-align: justify;
+    }
+}
+
+
+.h-line{
+    display: block;
+    background-color: white;
+    width: 90%;
+    height: 1px;
+}
+
+.v-line{
+    display: block;
+    background-color: white;
+    width: 1px;
+    height: 100%;
+}
+
+.right{
+    width: 40%;
+    height: 100%;
 }
 
 .dissappear{
