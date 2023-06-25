@@ -33,6 +33,7 @@ const About = (props) => {
     }, 500);
   };
 
+
   return (
     <div id="container" className={styles.container}>
       <Header
@@ -42,7 +43,7 @@ const About = (props) => {
       ></Header>
       <div className={styles.about}>
         <div className={styles['featured-image']}>
-          <img src="" alt="featured image" />
+          <img src="https://cdn.britannica.com/91/222691-050-E8BDF226/installing-solar-panels.jpg" alt="featured about" />
         </div>
         <div className={styles['about-content']}>
           <h2>Local ingenuity</h2>

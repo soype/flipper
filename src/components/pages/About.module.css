@@ -19,6 +19,33 @@
   border-radius: 2rem;
 }
 
+.featured-image {
+  margin: 1rem;
+  width: 60%;
+  overflow: hidden;
+  height: 80%;
+  border-radius: 1rem;
+}
+.featured-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50%;
+     object-position: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.about-content {
+  text-align: right;
+  margin: 1rem;
+}
+.about-content h2 {
+  margin: 1rem;
+}
+.about-content p {
+  margin: 1rem;
+}
+
 .dissappear {
   opacity: 0;
   transition: opacity 0.5s;
