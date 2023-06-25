@@ -7,6 +7,9 @@ import styles from "./Contact.module.css";
 const Contact = (props) => {
 
   const [formEnabled, setFormEnabled] = useState(false);
+  const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
 
   const homeHandler = () => {
     document.getElementById("container").classList.toggle(styles.dissappear);
@@ -36,9 +39,33 @@ const Contact = (props) => {
     }
   };
 
+  const nameHandler = e => {
+    setContactName(e.target.value);
+    if(e.target.value.length > 0 && contactEmail.length > 0){
+      setFormEnabled(true);
+    }else{
+      setFormEnabled(false);
+    }
+  }
+
+  const emailHandler = e => {
+    setContactEmail(e.target.value);
+    if(e.target.value.includes('@') && contactName.length > 0){
+      setFormEnabled(true);
+    }else{
+      setFormEnabled(false);
+    }
+  }
+
+  const messageHandler = e => {
+    setContactMessage(e.target.value);
+  }
+
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    console.log('sent')
+    console.log(contactName);
+    console.log(contactEmail);
+    console.log(contactMessage);
   }
 
   return (
@@ -52,10 +79,10 @@ const Contact = (props) => {
         <div className={styles['form-container']}>
           <form action="" className={styles['contact-form']} onSubmit={formSubmitHandler}>
             <h2>Let's get in touch</h2>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <button className={`${styles['submit-btn']} ${ formEnabled && styles['submit-enabled']}`}>Send</button>
+            <input type="text" placeholder="Name" required onChange={nameHandler} />
+            <input type="email" placeholder="Email" required onChange={emailHandler} />
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your message" onChange={messageHandler}></textarea>
+            <button className={`${styles['submit-btn']} ${ formEnabled && styles['submit-enabled']}`} disabled={!formEnabled}>Send</button>
           </form>
         </div>
       </div>

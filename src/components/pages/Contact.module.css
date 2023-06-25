@@ -18,6 +18,49 @@
   backface-visibility: hidden;
   border-radius: 2rem;
 }
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form input, .contact-form textarea {
+  margin: 0.5rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: gray;
+  color: rgb(211, 211, 211);
+  outline: none;
+  border: none;
+  resize: none;
+}
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+  color: rgb(190, 190, 190);
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: rgb(190, 190, 190);
+}
+
+.submit-btn {
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  color: rgb(211, 211, 211);
+  background-color: rgb(98, 98, 98);
+  cursor: default;
+  transition: all 1s;
+}
+
+.submit-enabled {
+  background-color: rgb(58, 58, 255);
+  cursor: pointer;
+}
 
 .dissappear {
   opacity: 0;
