@@ -48,9 +48,9 @@ const Home = (props) => {
         </div>
         <div className={styles.right}>
           <span className={`${styles['v-line']} ${styles['v-line-animated']}`}></span>
-          <img src="https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" className={`${styles['image-large']} ${styles['appear']}`} />
+          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/10/featured_image_grid_tied_solar.jpeg.jpg" alt="on-grid" className={`${styles['image-large']} ${styles['appear']}`} />
           <span className={`${styles['h-line']} ${styles['h-line-animated']}`}></span>
-          <img src="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" className={styles['image-small']} />
+          <img src="https://cdn.homedit.com/wp-content/uploads/2020/08/Off-Grid-Solar-Systems-.jpg" alt="off-grid" className={styles['image-small']} />
         </div>
         
       </div>

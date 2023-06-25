@@ -21,6 +21,13 @@ const Header = (props) => {
         <div className={styles.logo} onClick={toggleHomeHandler}>Solar Systems</div>
         <div className={styles.menu}>
             <li onClick={toggleHomeHandler}>Home</li>
+            <div className={styles.list}>Services 
+              <ul className={styles['list-content']}>
+                <li>On-grid</li>
+                <li>Off-grid</li>
+                <li>Hybrid</li>
+              </ul>
+            </div>
             <li onClick={toggleAboutHandler}>About</li>
             <li onClick={toggleContactHandler}>Contact</li>
         </div>
